@@ -1,0 +1,15 @@
+﻿.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.gguf
+*.sqlite3
+*.db
+*.pem
+*.key
+agent.py.backup
+agent.py.pre-fix
+.agent_backups/
