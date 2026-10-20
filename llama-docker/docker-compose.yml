@@ -1,0 +1,32 @@
+services:
+  llama-server:
+    image: ghcr.io/ggml-org/llama.cpp:server
+    container_name: llama-server
+    restart: unless-stopped
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - "D:/AI-Agent/models:/models:ro"
+
+    command:
+      - "-m"
+      - "/models/Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf"
+      - "-c"
+      - "64000"
+      - "-np"
+      - "1"
+      - "-ctk"
+      - "q4_0"
+      - "-ctv"
+      - "q4_0"
+      - "-fa"
+      - "on"
+      - "--jinja"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "8080"
+      - "-t"
+      - "4"
