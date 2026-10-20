@@ -1,4 +1,4 @@
-# Local AI Agent Starter (Qwen + llama-server)
+# Local AI Agent Starter (Qwen 3 4B Instruct + llama-server)
 
 A small, local-first agent controller that calls an OpenAI-compatible llama-server and can:
 - list files in a dedicated workspace
